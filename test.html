@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- xlsx.js (C) 2013-present  SheetJS http://sheetjs.com -->
+<!-- vim: set ts=2: -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<title>Gantt Chart Plotter</title>
+<style>
+#drop{
+	border:2px dashed #bbb;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:25px;
+	text-align:center;
+	font:20pt bold,"Vollkorn";color:#bbb;
+	height:350px;
+	vertical-align: middle; 
+}
+/*#drop:hover{background-color: yellow;}*/
+#b64data{
+	width:100%;
+}
+#out2{
+	font:20pt bold,"Vollkorn";color:red;
+}
+.chartWithOverlay {
+       position: relative;
+       width: 700px;
+}
+.overlay {
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       top: 0px;    /*chartArea top*/  
+       left: 0px;  /*chartArea left */
+}
+/*[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  display: block;
+  left: 0px;
+  padding: 4px;
+  background-color: #444;
+  color: #eee;
+  white-space: nowrap;
+  z-index: 9999;
+  opacity:1;
+
+  bottom: -3em;
+}
+
+[data-tooltip]:hover:after {
+}*/
+</style>
+</head>
+<body>
+<b>Gantt Chart Plotter</b><br /><br />
+
+
+
+<div id="drop">Drop an XLSX / XLSM / XLSB / ODS / XLS / XML file here to see sheet data</div>
+<!-- <input type="file" id="input-file" defaultValue="test.xlsx" />
+ --><br />
+<pre id="out2"></pre>
+<br />
+<br />
+	<div  class="chartWithOverlay">
+		<div id="chart_div"></div>
+		<div class="overlay">
+			<div id="chart_div_svg"></div>
+		</div>
+	</div>
+	<!-- <canvas id="canvas" style="position:absolute;z-index:100;top:0px"></canvas> -->
+	<div  class="chartWithOverlay">
+		<div id="chart_div2"></div>
+		<div class="overlay">
+<!-- 			<canvas id="canvas2"></canvas> -->
+			<div id="chart_div2_svg"></div>
+		</div>
+	</div>
+ 
+<br />
+
+
+<pre id="out"></pre>
+<br />
+<br />
+<!-- <input type='file' id='filename'>
+<input type='button' id='btnStart' value='Start'> -->
+
+<script src="jszip.js"></script>
+<script src="xlsx.js"></script>
+<script src="test2.js"></script>
+
+
+</body>
+</html>
